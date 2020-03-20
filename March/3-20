@@ -1,0 +1,124 @@
+数据类型  值类型/引用类型    值类型有简单/复合  整数浮点布尔字符   枚举结构        引用用预定义  自定义   预定义object string      数组 类 接口 委托
+uint 表示无符号    int32位有符号  sbyte8位 short16位  long64位   byte8位无符号       decimal精确到28位
+bool 默认false
+char Char定义字符 只能用单引号  
+引用类型 类似指针 对值的引用  object 所有类型都是从object继承的  string unicode字符组成序列
+常量 不能改变   字面  符号const
+变量 内存中一个内存单元  表达式 运算符与操作数
+单目 双目 三目     算数 自增自减 赋值 关系 逻辑 位 条件运算符
+使用%时结果符号与左操作数相同
+逻辑与或非  ！ && ||
+位运算  位或|有1即为1  位与&有0即为0  位异或^全0/全1才为0   位取反~ 0变11变0
+左移相当于乘2的n次方  右移相反
+判断运算   判断？结果1：结果2
+优先级   单 算 位 关 逻 条 赋
+自动类型转换（隐式）  类型兼容        显式
+装箱 拆箱   值与引用类型变换    栈 堆
+else永远与最后出现的if语句相匹配  if多于else的情况
+switch语句多分支    while  do while    for
+break  continue   goto 改变代码执行顺序 忽略逻辑直接跳到某语句
+数组  int[] arr = new int[5];       int[] arr=new int[5]{1,2,3,4,5};    string[] arrStr={"QQW","QQASX"};省略长度初始化
+引入  多维数组 多个下标访问    可以不规则   copy  copy to   exists   getlength   getvalue    reverse   setvalue    sort
+foreach遍历数组    Console.Write
+
+对象 类 实例化
+对象=算法+数据结构    程序=对象+对象+
+封装  类将内部数据隐藏  为用户提供对象的属性和行为的接口   用户通过这些接口使用这些类 无需知道内部构成 不能操作内部数据
+继承  子类继承
+多态   父类子类  将父类对象应用于子类特征  类实例的相同方法在不同情形有不同表现形式    具有不同内部机构的对象可以共享相同的外部接口 通过公共类 他们可以通过相同的方式调用
+类是一种数据结构  数据成员 函数成员 嵌套类型     对现实生活中一类具有共同特征事物的抽象
+public  private  internal  protected  protected internal
+类的成员包括 数据成员 方法成员
+数据成员  字段 属性 枚举               构造函数 析构函数
+构造函数名称与类相同 创建对象时执行       析构函数 类名加~命名  垃圾回收功能 实例不有效符合析构条件时雕工析构函数实现垃圾回收
+对象 创建 访问 引用 销毁
+this关键字   隐式用于引用对象的成员变量和方法
+类是具有相同/相似结构 操作和约束规则的对象组成的集合 对象是某一类的具体化实例，每个类都是具有某些共同特征的对象的抽象
+方法声明     参数 值参数/ref参数    ref参数使形参按引用传递，即会修改实参          out参数 定义输出参数 导致参数通过引用传递，方法声明和调用必须显式使用out关键字   params参数 一维数组 指定参数数目可变时采用的方法参数
+静态方法 引用this会编译错误   使用类名直接调用    {0}用来作为输出格式
+实例方法  对类的给定实例进行操作 需要类的对象调用  可以使用this
+重载  方法名相同 数据类型 个数或顺序不同的方法
+
+两种类 包含Main()方法   需要自己实例化对象
+is a 的关系  所有东西都被认为是对象   与对象实例化一起使用的方法称为实例方法
+分配内存  仅仅声明未创造对象
+
+windows应用开发
+创建项目 界面设计 设置属性 编程 保存 程序运行
+添加窗体    program.cs改变run方法参数 
+icon属性更改窗体图标   formborderstyle属性  startposition属性  size属性   backgroundimage属性   topmost属性
+show显式  hide隐藏  close关闭窗体
+load事件 加载窗体    formclosing 窗体关闭时触发
+control类 基本功能 处理消息路由和安全
+label 用于显示用户不能编辑的文本
+button 用于显示文本/图像
+textbox 用于获取用户输入 可编辑 也可以只读  readonly   passwordchar   multiline    textchanged
+checkbox 复选框   checkstate判断是否选中   checkstatechanged 相应复选框选中状态
+radiobutton 空间  两个/多个互斥选项组成  checked 判断是否选中   checkedchanged响应单选按钮选中状态更改事件
+richtextbox 格式文本框 scrollbars显示滚动条 selectionfont/selectioncolor设置字体属性  text属性/linkclicked事件显示超链接样式    selectionbullet/selectionindent属性设置段落格式
+combobox下拉组合框  dropdownstyle设置下拉组合框    selectedvaluechanged响应下拉组合框的选项值更改
+listbox 列表控件 显示列表 items属性的add/remove方法   horizontalscrollbar属性和scrollalwaysvissible属性总显示滚动条    selectionmode选择多项
+groupbox控件   text属性 为其他控件提供分组 
+listview 列表视图控件   显示带图标的项列表 显示大图标小图标和数据   add removeat clear   selected  smallimagelist largeimagelist  stateimagelist为项添加图标  view启用平铺视图  grooup为项分组
+treeview空间 树空间 显示节点层次结构  nodes属性的add remove方法   afterselect node.text属性  imagelist imageindex设置节点图标
+imagelist 图片存储控件    colordepth颜色深度  images包含关联控件将要使用的图片  imagesize图像大小  imagestream图像列表关联的图像流
+timer 计时器组件  定期引发事件 时间间隔的长度interval定义  enabled是否运行  start启动  stop停止  tick事件设置的发生事件
+menustrip控件 菜单栏
+toolstrip 工具栏
+statusstrip空间  状态栏 最底部显示相关信息/应用程序信息
+messagebox 消息框
+showdialog方法 窗体对话框    非模式窗体使用show
+openfiledialog表示通用对话框，来指定一个/多个打开文件的文件名
+savefiledialog另存为
+folderbrowserdialog控件提示用户选择文件夹
+colordialog显示可用颜色
+fontdialog 字体对话
+Mdi窗体   多文档界面 显示多个文档  包含子菜单   ismdicontainer属性设置父窗体  mdiparent属性确定子窗体
+layoutMdi排列多文档界面父窗体中子窗体  
+pagesetupdialog 用于设置页面详细信息   设置边框 边距调整量  页眉  页脚  纵向/横向打印
+printdialog选择打印机 打印也 确定其他设置
+printpreviewdialog 显示文档打印后外观 包含打印放大显示一页/多页 及关闭对话框按钮
+printdocument  设置打印文档
+
+文件操作  顺序文件 随机文件 二进制文件
+system.io命名空间是C#对文件/流操作必须引用的命名空间   有很多类和枚举  用于进行数据文件/流的读写操作  
+File类 支持对文件基本操作  创建/复制/删除/移动 打开文件的静态方法 创建FileStream对象        静态方法 效率较高
+Fileinfo类没有静态方法 用于实例化对象
+directory类用于文件夹典型操作 复制/移动/重命名/创建/删除等
+directoryinfo类与directory类关系类似
+path类包含文件及目录路径信息的string实例执行操作
+path hasextension方法和getfullpath方法判断是否有扩展名及完整路径
+driveinfo类用来提供访问 确定哪些驱动器可用    getdrives方法 用来检索计算机上所有逻辑驱动器名称
+流操作类介绍  流操作 读取 写入 查找   bufferedstream  cryptostream memorystream networkstream
+文件流类用filestream表示      close lock read readbyte seek setlength unlock write
+文本文件 streamwriter类 streamreader类   写入读取
+二进制文件  binarywriter binaryreader类实现
+
+数据库 SQL   select insert update delete
+system.data提供---odbc
+connection数据连接对象  连接SQLSERVER数据库  连接Access数据库string connectionString=“provide=提供者; Data Source=Access文件路径”; 
+熟悉command对象  对数据源进行增删改查  sqlcommand oledbcommand odbccommand oraclecommand
+executenonquery 执行非select命令  executescalar执行select查询命令    executereader执行select对象 返回datareader对象
+sqlcommand对象  sqlconnection对象
+datareader对象 必须一直保持与数据库连接   read方法 使datareader对象前进到下一条记录      close关闭datareader对象    get用来读取数据集的当前行某一列数据
+dataset对象 创建在内存中的数据集合 包含一组datatable和datarelation对象
+dataadapter对象 充当dataset和实际数据源间桥梁的对象   通过command对象执行sql   另一种把dataset对象做出的更改写入数据源
+fill方法重载 填充dataset
+dataset和datareader区别  dataset将数据从数据库中复制下来存储在内存中，datareader对象像一根管道 抽出用户所需数据 必须保证连接状态
+datagridview控件  
+bindingsource组件  数据源绑定 封装/管理窗体中的数据源
+
+LINQ 语言集成查询   LINQ查询 form指定数据源和范围变量  select指定形式  group分组 where 筛选 orderby排序 join连接数据源 let引入范围变量 into标识符
+var声明隐型局部变量  内置 匿名 用户定义
+lambda表达式 匿名函数   => 意为goes to 
+
+多线程  网络/web服务器与数据库通信  执行占用大量时间操作  区分不同优先级任务  使用户界面可以在将时间分配给后台任务时仍能快速做出响应
+thread类  system.threading命名空间内    thread类具有threadstart委托或parameterizedthreadstart委托的构造函数
+线程挂起 suspend   恢复resume
+线程休眠 sleep        指定时间/指定时间量
+abort方法终止线程 join方法终止线程
+线程优先级  abovenormal belownormal highest lowest normal
+lock关键字   确保代码块运行不会被中断   互斥锁
+监视器monitor   提供了同步对对象访问机制 像单个线程授予对象锁  enter获取  exit释放  wait释放阻止进程知道重新获取该锁
+线程池 执行任务 发送工作项 处理异步io 代表其他线程等待及处理计时器   threadpool  queueuserworkitem方法    进程调用getmaxthreads方法确定线程数量  使用setmaxthreads方法更改线程池中线程数
+互斥对象  mutex 可以使跨进程的线程同步  close方法释放资源  releasemutex释放mutex一次  waitone组织当前线程直到waithandle收到信号
