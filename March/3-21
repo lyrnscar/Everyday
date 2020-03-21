@@ -1,0 +1,83 @@
+android 部分
+JDK 包括运行环境JRE 工具和标准API类库    Sun公司开发
+用户命令 cmd javac   android sdk    acd模拟器测试
+eclipse adt   IDE集成开发环境  向eclipse中加入sdk
+活动  暂停  停止 销毁  oncreate  onstart  onresume  onpause  onstop  onrestart  ondestroy
+xml文件布局  存储规范文件信息  manifest.xml  描述组件命名  基于权限  声明api等级  声明特征  声明需要链接的API库 activity
+定义activity service receiver provider
+intent组件   创建项目 在activity类中编写代码 或者引用   src gen assets bin res drawable layout values menu
+继承Activity抽象类   xml文件自动生成
+分辨率  色彩数量  CPU  内存
+像素单位 dip px pt sp in mm
+
+标准身高计算器   
+用户界面 满足系统功能需求 提供准确信息 布局合理 界面风格一致    application  activity  window  content view  view/group
+View类  UI控件父类  属性例如background
+textview->edittext        R.java最终类 不手动修改              button   checkbox
+线性布局 表格布局 相对布局 单帧布局 绝对布局
+垂直线性布局 水平线性布局
+radiogroup容器中的radiobutton单选框
+启动activity类 oncreate onstart onresume 之后显示activity  销毁时调用onpause onstop ondestroy
+按键捕捉  onkeydown  onkeyup  ontouchevent  onkeylongpress  onbackpressed
+创建项目 创建布局 设置主题 输入框 性别多选控件 计算按钮 显示结果     线性布局 子空间weight布局控制相对大小    wrap_content自适应宽度高度
+拖拽控件    单击按钮 动作事件 向系统注册事件监听 系统调用相应方法实现交互      java事件机制实现 自身类作为事件监听器 外部类作为  内部类作为  匿名内部类
+确定监听方式  选择监听接口  定义类实现接口  为进行事件监听的控件添加监听器
+接口onclicklistener  onkeylistener  oncheckedchangelistener  onitemselectedlistener  timepicker
+alertdialog提示框  创建builder 然后使用show方法显示  也可以create
+showmessage方法给予信息提示    evaluateheight方法计算身高性别   输入体重
+菜单 选项optionmenu 上下文contextmenu 子submenu   常用选项菜单  add添加菜单项
+响应单击   退出软件（返回进程id 终止进程killprocess）       生成apk文件传入手机or直接发布调试
+注册事件   tostring方法     调查问卷程序
+
+手机通讯录
+添加记录 修改 查找 删除 共享数据 设计界面
+文件存储 数据库存储 网络存储    文件存储自定义数据格式  数据库性能较高  网络存储用于实时数据
+sharedpreferences   io读取文件  sqlite数据库轻量级嵌入式   contentprovider存储   internet网络存储（请求并接收数据）
+文件存储  ROM内存文件存储  SD卡文件存储  openfileinput 操作
+350kb内存  独立 隔离 跨平台 多语言 安全 轻量级 零配置
+android没有jdbc连接
+sqlitedatabase类  insert update delete select      cursor
+sqliteopenhelper类 辅助创建一个sqlite数据库     数据库更新通过重新构造sqliteopenhelper对象实现 通过调用onupgrade方法升级
+contentvalues类 用于存储一些键值对
+toast类 显示提示信息 自动消失
+垂直方式显示        layoutinflater类 解析xml布局文件
+设计输入界面   姓名 单位 电话 qq 地址   使用线性布局嵌套textview和edittext表示
+创建子类用于对数据库进行管理 增删改查数据库打开关闭操作  
+调用父类构造函数  连接getwritabledatabase  关闭.close  创建.execSQL    添加insert    查询使用cursor对象  rawquery进行查询
+创建联系人信息类   创建contactstable操作类 用于封装联系人表中的数据
+R.id.--获取编号
+cursor类 游标类 在数据库查询结果集合上前后移动  检索每行数据     开始指向-1位置 movetonext方法移动至下一行
+Bundle类用于不同activity数据传递
+Intent对象 运行绑定机制  把intent看作是请求从其他组件执行行动     显示intent   隐式intent
+URI类 通用资源标志符  包含数据所在位置 每种资源都可以使用URI表示
+dialog类 alertdialog警告对话框  characterpickerdialog字符选择  progressdialog进度对话框  datepickerdialog日期选择  timepickerdialog时间选择
+listview类  setadapter方法  setonitemclicklistener监听
+adapter类  适配器  arrayadapter显示文字 simplecursoradapter游标适配器 读取数据显示在列表上   simpleadapter较强扩展性  baseadapter在列表上添加处理事件
+使用%模糊匹配联系人用户名等信息 使用游标cursor对象表示结果 循环显示
+对外共享数据  contentprovider    系统通信录  sdk的uri进行增删改查  提供权限xml里
+主界面  添加 编辑 查看信息 删除 查询     listview
+baseadapter
+
+多媒体
+seekbar类 进度条
+surfaceview控件以流方式显示视频
+mediaplayer idle状态 end状态 initialized状态 prepared状态 preparing状态 started状态 paused状态 stop状态 playbackcompleted状态 error状态
+本地资源    获得路径   开始 暂停 结束
+程序是一组指令有序集合 是一个静态实体
+进程是在内存中运行的应用程序 程序在一定数据集上运行的全部动态过程
+线程是进程的一个实体 cpu调度分派的基本单位
+使用thread类实现多线程/使用runnable实现多线程/使用timer和timertask实现多线程
+android文件系统采用树形管理 
+快进 快退 暂停 开始 已播放时间 总播放时间 文件名 进度条
+onclicklistener  设置pause start隐藏/可见      seekto方法快进快退
+openfile  intent putextra startactivity
+
+相机
+imageview类 显示图像 图标图片
+调用系统拍照功能 intent      mediastore action_image_capture
+open获得相机对象  getparameters获得参数     camera类  parameters类获得参数
+定义activity实现callback接口 使用camera的open方法打开相机或的对象  调用getparameters获得默认设置  通过setpreviewdisplay设置surfaceholder对象
+surfaceholder对象  startpreview函数预览     autofocus自动对焦   takepicture拍照  stoppreview停止预览release释放相机
+bitmapfactory类 创建bmp图片
+sensormanager类  传感器   sensoreventlistern接口
+相机拍照 读写文件权限     文件流 字节流数组
