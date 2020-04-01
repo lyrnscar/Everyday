@@ -1,6 +1,6 @@
 # Everyday
 do it everyday  
-do not care me 
+do not care me  
 i'm learning.  
 this is just like a homework and a word about hello world.  
 January：机器学习基础教程1-6章代码复现  
